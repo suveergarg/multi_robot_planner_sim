@@ -1,0 +1,6 @@
+image: map_1.pbm
+resolution: 0.01666              # metres per pixel....here image is 600x600, so taking a resolution of 1/60 would make map 10mx10m
+origin: [-0.500000, -0.500000, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
