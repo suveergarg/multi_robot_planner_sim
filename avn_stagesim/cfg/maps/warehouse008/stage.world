@@ -3,14 +3,14 @@ define hokuyolaser ranger
   sensor(       
     # laser-specific properties
     # factory settings for LMS200  
-    range [ 0.0  1.0 ]
+    range [ 0.1  1.0 ]
     fov 150.0
     samples 270
   )
   model
   (
     # generic model properties
-    size [ 0.07 0.07 0.05 ] # dimensions from LMS200 data sheet  
+    size [ 0.05 0.05 0.05 ] # dimensions from LMS200 data sheet  
     color "blue"
     obstacle_return 0
   )
@@ -86,10 +86,11 @@ define pioneer_base position
   color "red"                   # Default color.
   drive "diff"                  # Differential steering model.
   gui_nose 0                    # Draw a nose on the robot so we can see which way it points
-  obstacle_return 0             # Can hit things.
+  obstacle_return 1             # Can't hit things.
   ranger_return 0.5              # reflects sonar beams
   blob_return 1                 # Seen by blobfinders  
   fiducial_return 1             # Seen as "1" fiducial finders
+  laser_return 2                # can be detected by laser
 
   localization "gps"             
   localization_origin [0 0 0 0]   # Start odometry at (0, 0, 0).

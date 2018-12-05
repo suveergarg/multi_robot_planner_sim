@@ -16,7 +16,7 @@ class server(object):
 		self.bots=[]
 		self.G=graph.create_graph()
 		rospy.init_node("Central_Server",anonymous=True)
-		for i in range(6):
+		for i in range(1):
 			self.bots.append(bot.bot(i,i))						
 								
 
@@ -31,3 +31,6 @@ if __name__ == '__main__':
 	
 	Server=server()
 	Server.update()
+	
+	while not rospy.is_shutdown():
+		rospy.spin()
